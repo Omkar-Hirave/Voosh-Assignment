@@ -26,7 +26,6 @@ const authController = {
       const updatedProfile = await authService.updateUserProfile(userId, req.body);
       res.json("Your profile has been updated...");
     } catch (error) {
-      console.log("The data is ---> ",error)
       res.status(400).json({ error: error });
     }
   }, 
